@@ -15,8 +15,8 @@ if not cli_setup():
     ])
 
 poco = AndroidUiautomationPoco()
-poco.device.wake()
-poco(text='微信').click()
+#poco.device.wake()
+#poco(text='微信').click()
 
 # Set the setting item
 group_inf = input('\ngroup: ')
@@ -48,7 +48,7 @@ else:
 
 def is_bao_exist():
     try:
-        return not poco("com.tencent.mm:id/ag").child("android.widget.RelativeLayout")[-1].offspring("android.widget.FrameLayout").child("android.widget.LinearLayout").offspring("com.tencent.mm:id/aul").exists()
+        return not poco("com.tencent.mm:id/ag").child("android.widget.RelativeLayout").offspring("com.tencent.mm:id/aui")[-1].offspring("com.tencent.mm:id/aul").exists()
     except Exception:
         return 0
 
@@ -68,11 +68,11 @@ while (True):
     if poco('com.tencent.mm:id/auk').exists():
         if is_bao_exist():
             status = catch_bao(poco('com.tencent.mm:id/auk')[-1])
-            if status != 0:
+            if status == 0:
+                print('fail')
+            else:
                 print('Win: ' + str(status))
                 setting.addMoney(status)
                 print('Total Win: ' + str(setting.get_setting()['money']) + '\n')
                 poco('com.tencent.mm:id/m1').click()
-            else:
-                print('fail')
 
