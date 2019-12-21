@@ -1,7 +1,3 @@
-![](doc/ico.png)
-
----
-
 ## What is this?
 
 This is a robot which can help you win the battle of "WeChat Red Envelop"
