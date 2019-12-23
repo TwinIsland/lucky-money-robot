@@ -8,7 +8,14 @@ def get_setting():
         f.close()
         return data
 
+def addMoney(money):
+    current_setting = get_setting()
+    current_setting['money'] += money
+    with open('config.evlp','w') as f:
+        f.write(json.dumps(current_setting))
+    f.close()
 
+'''
 def write_setting(update_frequency, group_name):
     money =  get_setting()['money']
     with open('config.evlp','w') as f:
@@ -18,11 +25,5 @@ def write_setting(update_frequency, group_name):
             'money':money
         }))
         f.close()
-
-def addMoney(money):
-    current_setting = get_setting()
-    current_setting['money'] += money
-    with open('config.evlp','w') as f:
-        f.write(json.dumps(current_setting))
-    f.close()
+'''
 
