@@ -11,6 +11,8 @@ This is a robot which can help you win the battle of "WeChat Red Envelop"
 
 ## Update
 
+[F] logging system + fix some bug
+
 [P] bug: sometimes cannot detect Red Envelop 2019/12/23
 
 [F] first version
