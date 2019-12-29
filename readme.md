@@ -11,6 +11,10 @@ This is a robot which can help you win the battle of "WeChat Red Envelop"
 
 ## Update
 
+[F] test the new version (SHA: 5553bcec29000c14222ec4e1fee22e7ce2ee561f)
+
+[P] fix money value bug (may caused by int->float process)
+
 [F] logging system + fix some bug
 
 [P] bug: sometimes cannot detect Red Envelop 2019/12/23
