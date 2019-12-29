@@ -4,6 +4,10 @@ Occure time: 12292134
 
 Version: 1728c169d245f425a5c8ce1666cfd327822055fe
 
+Descp: 
+1. warming that setting.py cannot be accessed
+2. cannot exit after catch red envelop
+
 Log:
 ```
 STATUS: begin running [12292134]
