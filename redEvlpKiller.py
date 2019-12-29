@@ -62,7 +62,7 @@ while (True):
     if is_bao_exist():
         status = catch_bao(poco('com.tencent.mm:id/auk')[-1])
         if status == 0:
-            print('fail')
+            print('Fail to get Envelop\n')
         else:
             print('Win: ' + str(status))
             setting.addMoney(status)
